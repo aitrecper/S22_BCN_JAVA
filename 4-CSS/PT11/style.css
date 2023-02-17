@@ -1,0 +1,41 @@
+body{
+    background-color: lavender;
+}
+
+h2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table{
+    width: 500px;
+    background-color: bisque;
+    border: solid 7px black;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+table tbody{
+    width: 100%;
+    margin-top: 5px;
+}
+
+td{
+    border-left: solid 1px black;
+    border-bottom: solid 2px black;
+    text-align: center;
+}
+
+caption span{
+    background-color: deepskyblue;
+    font-weight: bold;
+    font-size: large;
+}
+
+tfoot{
+    background-color: deepskyblue;
+}
+
+.w40p{
+    width: 40%;
+}
