@@ -1,0 +1,13 @@
+#p1{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    background-color: greenyellow;
+}
+
+#p2{
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+    background-color: greenyellow;
+}
