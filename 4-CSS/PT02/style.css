@@ -1,0 +1,10 @@
+
+#number:valid{
+    background-color: lightgreen;
+    color: green;
+}
+
+#number:invalid{
+    background-color: lightcoral;
+    color: red;
+}
