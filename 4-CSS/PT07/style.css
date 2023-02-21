@@ -1,0 +1,24 @@
+html{
+    background-color: #fedead;
+}
+
+h1{
+    color: red;
+}
+
+h1:hover{
+    color:black;
+}
+
+p{
+    column-count: 3;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-color: red;
+    column-rule-width: 2px;
+}
+
+p::selection{
+    background-color: black;
+    color: aliceblue;
+}
