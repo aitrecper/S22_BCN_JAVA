@@ -1,0 +1,28 @@
+.initial{
+    width: 600px;
+    height: 600px;
+}
+
+.circle{
+    position: relative;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+}
+
+.first{
+    background-color:#eae8de;
+}
+
+.red{
+    background-color: red;
+}
+
+.white{
+    background-color: white;
+}
+
+.h-line{
+    width: 420px;
+    border: 1px solid black;
+}

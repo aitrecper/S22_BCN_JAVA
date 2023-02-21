@@ -1,0 +1,25 @@
+html{
+    background-color: #ffe4c4;
+
+}
+div{
+    width: 300px;
+    background-color: #efefef;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 36px;
+    padding: 10px;
+}
+
+.left{
+    text-align: start;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: end;
+}
