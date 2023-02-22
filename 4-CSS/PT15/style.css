@@ -8,6 +8,10 @@
     width: 70%;
     height: 70%;
     border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .first{
@@ -22,7 +26,19 @@
     background-color: white;
 }
 
+.line{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
 .h-line{
     width: 420px;
-    border: 1px solid black;
+    height: 1px;
+    background-color: black;
+}
+.v-line{
+    height: 420px;
+    width: 1px;
+    background-color:  black;
 }
