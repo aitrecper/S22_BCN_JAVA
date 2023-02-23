@@ -86,8 +86,48 @@ order:-10;
 align-self:end;
 ```
 
-## Level 16
+## Level 17
 ```
 order:10;
 align-self:end;
+```
+
+## Level 18
+```
+flex-wrap:wrap;
+```
+
+## Level 19
+```
+flex-direction: column;
+flex-wrap: wrap;
+```
+
+## Level 20
+```
+flex-flow: column wrap;
+```
+
+## Level 21
+```
+align-content:flex-start;
+```
+
+## Level 22
+```
+align-content:flex-end;
+```
+
+## Level 23
+```
+flex-direction:column-reverse;
+align-content:center;
+```
+
+## Level 24
+```
+flex-flow:column-reverse wrap-reverse;
+align-items:end;
+justify-content:center;
+align-content: space-between;
 ```
