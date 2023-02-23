@@ -1,0 +1,61 @@
+html{
+    background-color: floralwhite;
+}
+
+.initial{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.box{
+    display: flex;
+}
+
+.box-1{
+    align-items: center;
+    justify-content: center;
+}
+
+.box-2{
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+}
+
+h3{
+    font-style: italic;
+    text-align: center;
+}
+
+.circle{
+    margin: 10px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+.magenta{
+    background-color: magenta;
+}
+
+.aqua{
+    background-color: aqua;
+}
+
+.yellow{
+    background-color: yellow;
+}
