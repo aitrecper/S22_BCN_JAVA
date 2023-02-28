@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap practica 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-flex text-center display-1">
+        <div class="row mx-3">
+            <div class="bg-limegreen fst-italic border border-1 border-dark">Header</div>
+        </div>
+        <div class="row m-3">
+            <div class="col-3 offset-md-3 border border-1 border-dark bg-teal" style="height: 100px;">1</div>
+            <div class="col-3 border border-1 border-dark bg-teal" style="height: 100px;">2</div>
+            <div class="col-3 d-md-inline d-none" style="height: 100px;"></div>
+            <div class="col-3 border border-1 border-dark bg-teal" style="height: 100px;">3</div>
+            <div class="col-3 offset-md-6 border border-1 border-dark bg-teal" style="height: 100px;">4</div>
+        </div>
+        <div class="row m-3">
+            <div class="col-3 border border-1 border-dark bg-lightgray order-md-4">a</div>
+            <div class="col-3 border border-1 border-dark bg-lightgray order-md-3">b</div>
+            <div class="col-3 border border-1 border-dark bg-lightgray order-md-2">c</div>
+            <div class="col-3 border border-1 border-dark bg-lightgray order-md-1">d</div>
+        </div>
+        <div class="row mx-3 bg-aqua fst-italic border border-1 border-dark d-none d-md-block">Desktop</div>
+        <div class="row mx-3 bg-aqua fst-italic border border-1 border-dark d-none d-sm-block d-md-none">Tablet</div>
+        <div class="row mx-3 bg-aqua fst-italic border border-1 border-dark d-sm-none">Mobile</div>
+
+        <div class="row fst-italic m-3 justify-content-md-center">
+            <div class="col col-md-3 me-md-2 bg-orange border border-1 border-dark order-md-1 d-none d-sm-block">:(</div>
+            <div class="col col-md-3 bg-orange border border-1 border-dark order-md-2">:D</div>
+        </div>
+        <div class="row bg-limegreen fst-italic m-3 d-none d-sm-block">Footer</div>
+    </div>
+</body>
+</html>
