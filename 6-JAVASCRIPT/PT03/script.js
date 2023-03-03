@@ -5,7 +5,7 @@ var $null = null;
 var $undefined = undefined;
 var $simbol = Symbol('Algo');
 var $array = [1,"hola",false];
-var $object = {'llave' : 'Valor'};
+var $object = {llave : 'Valor'};
 var $function = function saludo(){
     alert('Soy una función');
 };
