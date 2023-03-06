@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript PT19</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <style>
-        .container{
+        .container {
             width: 100%;
             display: flex;
-            align-content: center;
             justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container-2{
+            display: flex;
+            align-items: center;
+        }
+        .container-3{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+        html {
+            background-color: black;
+        }
+        label{
+            background-color: red;
+            color: white;
+            font-size: 2em;
+            width: 100%;
+        }
+        input{
+            width: 100%;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <img src="img/boff.jpg" alt="" id="btn_on_off">
+        <div class="container-2">
+            <img src="img/boff.jpg" alt="alt text" id="btn_on_off" width="100px" />
+            <div class="container-3">
+                <label id="zoom_label" for="zoom">Light bulb zoom</label>
+                <br>
+                <input onchange="" type="range" min="1" max="7" value="7" step="1" id="zoom">
+                <br>
+                <label id="light_label" for="light">Light level</label>
+                <br>
+                <input type="range" min="1" max="7" value="7" step="1" id="light">
+            </div>
+        </div>
+        <div class="container-2">
+            <img src="img/off.jpg" alt="" id="bulb" width="700px" />
+            
+        </div>
     </div>
 </body>
+
 </html>
