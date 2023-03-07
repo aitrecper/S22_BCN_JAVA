@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript practica 20</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="normalize.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="tamagotchi" >
+            <div id="eat">
+                <div class="buttons">
+                    <div>
+                        <button id="ice_cream"><span>🍦</span></button>
+                    </div>
+                    <div>
+                        <button id="carrot"><span>🥕</span></button>
+                    </div>
+                    <div>
+                    <button id="thight" class="text-success"><span>🍖</span></button>
+                    </div>
+                </div>
+                <div>
+                    <progress id="eat_progress" value="50" max="100"></progress>
+                </div>
+                <span id="eat_progress_pc">50% Full</span>
+                <br>
+                <span class="text-success">EAT</span>
+            </div>
+            <div id="play">
+                <div class="buttons">
+                    <div>
+                        <button id="controller"><span>🎮</span></button>
+                    </div>
+                    <div>
+                        <button id="us_football"><span>🏈</span></button>
+                    </div>
+                    <div>
+                    <button id="chess" class="text-success"><span>♟️</span></button>
+                    </div>
+                </div>
+                <div class="progress_div">
+                    <div>
+                        <progress id="play_progress" value="50" max="100"></progress>
+                    </div>
+                    <span id="play_progress_pc"  >50% Fun</span>
+                </div>
+                <br>
+                <span class="text-warning">PLAY</span>
+            </div>
+            <div id="pet" class="flex-center">
+                <span id="pet_name">Aletín</span>
+                <img src="src/img/murloc.png" alt="" width="100px">
+                <div id="hearts"></div>
+                <div>
+                    <div>
+                        <progress class="progress_short" id="happiness_progress" value="50" max="100"></progress>
+                    </div>
+                    <span id="happiness_progress_pc"  >Happiness: 50%</span>
+                </div>
+            </div>
+            <div id="fight">
+                <div>
+                    <div class="buttons">
+                        <div>
+                            <button id="punch"><span>🥊</span></button>
+                        </div>
+                        <div>
+                            <button id="run"><span>🏃‍♂️</span></button>
+                        </div>
+                    </div>
+                    <div class="progress_div">
+                        <div>
+                            <progress id="fight_progress" value="50" max="100"></progress>
+                        </div>
+                        <span id="fight_progress_pc"  >50% Strength</span>
+                    </div>
+                </div>
+                <br>
+                <span class="text-danger">FIGHT</span>
+            </div>
+            <div id="sleep">
+                <div>
+                    <div class="buttons">
+                        <div>
+                            <button id="bed"><span>🛏️</span></button>
+                        </div>
+                        <div>
+                            <button id="moon"><span>🌚</span></button>
+                        </div>
+                    </div>
+                    <div>
+                        <progress id="sleep_progress" value="100" max="100"></progress>
+                    </div>
+                    <span id="sleep_progress_pc"  >100% Energy</span>
+                </div>
+                <br>
+                <span class="text-primary">SLEEP</span>
+            </div>
+        </div>
+    </body>
+</html>

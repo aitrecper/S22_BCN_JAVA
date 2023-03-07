@@ -1,0 +1,104 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+#tamagotchi{
+    height: 400px;
+    padding: 0px !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#pet{
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pet_name{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#eat{
+    width: 50vw;
+    height: 25vh;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+#play{
+    width: 50vw;
+    height: 25vh;
+    background-color: rgb(255, 255, 126);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#fight{
+    width: 50vw;
+    height: 25vh;
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#sleep{
+    width: 50vw;
+    height: 25vh;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+}
+
+.progress_div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 75%;
+}
+
+
+button{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.emoji_eat {
+    // font-size: 40px; /* tamaño del emoji */
+    color: green; /* color del emoji */
+    background-color: transparent; /* fondo transparente */
+}
+
+progress{
+    // background-color: black;
+    padding: 0px;
+    border-radius: 20px;
+    width: 40vw;
+}
+
+.progress_short{
+    width: 20vw;
+}
+
+/* Estilo para la etiqueta de la barra de progreso */
+progress::-webkit-progress-bar {
+    background-color: black; /* color de fondo de la barra de progreso */
+}
