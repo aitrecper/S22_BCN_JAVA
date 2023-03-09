@@ -1,0 +1,81 @@
+body{
+    font-size: 32px;
+    font-family: 'League Spartan';
+    font-weight: bold;
+}
+
+body.theme-1{
+    background-color: hsl(222, 26%, 31%);
+    color: white;
+}
+
+#screen{
+    width: 500px;
+    border-radius: 5px;
+    font-size: 32px;
+    text-align: end;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#screen.theme-1{
+    background-color: hsl(224, 36%, 15%);
+}
+
+#buttons{
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#buttons.theme-1{
+    background-color: hsl(223, 31%, 20%);
+}
+
+.calc_theme{
+    font-size: 16px;
+}
+
+.calc{
+    width: 600px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#reset{
+    background-color: hsl(225, 21%, 49%);
+    width: 238px;
+    height: 50px;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 5px 0px hsl(224, 28%, 35%);
+    transition: transform 0.2s;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#equal{
+    background-color: hsl(6, 63%, 50%);
+    width: 238px;
+    height: 50px;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 5px 0px hsl(6, 70%, 34%);
+    transition: transform 0.2s;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+}
