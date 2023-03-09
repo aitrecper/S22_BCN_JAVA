@@ -59,15 +59,15 @@ $().ready(() =>{
     function setSleepValue(sleepValue){
         if(sleepValue<=100 && sleepValue > 0){
             $('#sleep_progress').val(sleepValue);
-            $('#sleep_progress_pc').text(`${sleepValue}% Strength`);
+            $('#sleep_progress_pc').text(`${sleepValue}% Energy`);
         }else if(sleepValue>100){
             sleepValue = 100;
             $('#sleep_progress').val(sleepValue);
-            $('#sleep_progress_pc').text(`${sleepValue}% Strength`);
+            $('#sleep_progress_pc').text(`${sleepValue}% Energy`);
         }else if(sleepValue < 0){
             sleepValue = 0;
             $('#sleep_progress').val(sleepValue);
-            $('#sleep_progress_pc').text(`${sleepValue}% Strength`);
+            $('#sleep_progress_pc').text(`${sleepValue}% Energy`);
         }
         return sleepValue;
     }
@@ -93,8 +93,20 @@ $().ready(() =>{
         return happinessValue;
     }
 
+    function eatingSound() { 
+        $('#eat_sound')[0].play();
+    }
+
+    function murlocSound() { 
+        $('#murloc_sound')[0].play();
+    }
+
+    function sleepSound() { 
+        $('#sleep_sound')[0].play();
+    }
+
     $('#ice_cream').click(function (){
-        if( eatValue< 100 && fightValue > 0){
+        if( eatValue < 100){
             eatValue+=10;
             fightValue-=30;
             happinessValue+=30;
@@ -103,11 +115,12 @@ $().ready(() =>{
             fightValue = setFightValue(fightValue);
             happinessValue = setHappinessValue(happinessValue);
             sleepValue = setSleepValue(sleepValue);
+            eatingSound();
         }
     });
 
     $('#carrot').click(function (){
-        if( eatValue< 100 && fightValue < 100){
+        if( eatValue < 100){
             eatValue+=20;
             fightValue+=10;
             happinessValue-=20;
@@ -116,33 +129,36 @@ $().ready(() =>{
             fightValue = setFightValue(fightValue);
             happinessValue = setHappinessValue(happinessValue);
             sleepValue = setSleepValue(sleepValue);
+            eatingSound();
         }
     });
 
     $('#thight').click(function (){
-        if( eatValue< 100 && fightValue < 100){
+        if( eatValue < 100){
             eatValue+=40;
             fightValue+=10;
             sleepValue-=10;
             eatValue = setEatValue(eatValue);
             fightValue = setFightValue(fightValue);
             sleepValue = setSleepValue(sleepValue);
+            eatingSound();
         }
     });
 
     $('#controller').click(function (){
-        if( playValue < 100 && fightValue > 0){
+        if( playValue < 100){
             playValue+=20;
             fightValue-=20;
             happinessValue+=20;
             playValue = setPlayValue(playValue);
             fightValue = setFightValue(fightValue);
             happinessValue = setHappinessValue(happinessValue);
+            murlocSound();
         }
     });
 
     $('#us_football').click(function (){
-        if( playValue < 100 && fightValue < 100 && sleepValue > 0){
+        if( playValue < 100){
             playValue+=40;
             fightValue+=20;
             happinessValue-=10;
@@ -153,17 +169,101 @@ $().ready(() =>{
             fightValue = setFightValue(fightValue);
             happinessValue = setHappinessValue(happinessValue);
             sleepValue = setSleepValue(sleepValue);
+            murlocSound();
         }
     });
 
     $('#chess').click(function (){
-        if( playValue < 100 && fightValue > 0){
+        if( playValue < 100){
             playValue+=30;
             fightValue-=10;
             happinessValue+=10;
             playValue = setPlayValue(playValue);
             fightValue = setFightValue(fightValue);
             happinessValue = setHappinessValue(happinessValue);
+            murlocSound();
         }
     });
+
+    $('#punch').click(function (){
+
+        if(fightValue < 100){
+            fightValue+=50;
+            eatValue-=30;
+            playValue-=20;
+            happinessValue-=30;
+            fightValue = setFightValue(fightValue);
+            eatValue = setEatValue(eatValue);
+            playValue = setPlayValue(playValue);
+            happinessValue = setHappinessValue(happinessValue);
+            murlocSound();
+        }
+    });
+
+    $('#run').click(function (){
+
+        if(fightValue < 100){
+            fightValue+=100;
+            eatValue-=60;
+            playValue-=40;
+            happinessValue-=60;
+            fightValue = setFightValue(fightValue);
+            eatValue = setEatValue(eatValue);
+            playValue = setPlayValue(playValue);
+            happinessValue = setHappinessValue(happinessValue);
+            murlocSound();
+        }
+    });
+
+    $('#bed').click(function (){
+
+        if(sleepValue < 100){
+
+            sleepValue += 50;
+            eatValue*=0.25;
+            playValue*=0.25;
+            fightValue*=0.25;
+            happinessValue*=0.25;
+
+            sleepValue = setSleepValue(sleepValue);
+            eatValue = setEatValue(eatValue);
+            playValue = setPlayValue(playValue);
+            fightValue = setFightValue(fightValue);
+            happinessValue = setHappinessValue(happinessValue);
+            sleepSound();
+        }
+    });
+
+    $('#moon').click(function () { 
+
+        if(sleepValue < 100){
+
+            sleepValue += 100;
+            eatValue*=0.5;
+            playValue*=0.5;
+            fightValue*=0.5;
+            happinessValue*=0.5;
+
+            sleepValue = setSleepValue(sleepValue);
+            eatValue = setEatValue(eatValue);
+            playValue = setPlayValue(playValue);
+            fightValue = setFightValue(fightValue);
+            happinessValue = setHappinessValue(happinessValue);
+            sleepSound();
+        }
+    });
+
+    setInterval(function() {
+        sleepValue -= 10;
+        eatValue -= 10;
+        playValue -= 10;
+        fightValue -= 10;
+        happinessValue -= 10;
+
+        sleepValue = setSleepValue(sleepValue);
+        eatValue = setEatValue(eatValue);
+        playValue = setPlayValue(playValue);
+        fightValue = setFightValue(fightValue);
+        happinessValue = setHappinessValue(happinessValue);
+    }, 5000);
 });

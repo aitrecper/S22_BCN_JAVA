@@ -10845,7 +10845,7 @@ textarea.form-control-lg {
 
 #eat {
   width: 50vw;
-  height: 25vh;
+  height: 30vh;
   background-color: lightgreen;
   display: flex;
   flex-direction: column;
@@ -10860,7 +10860,7 @@ textarea.form-control-lg {
 
 #play {
   width: 50vw;
-  height: 25vh;
+  height: 30vh;
   background-color: rgb(255, 255, 126);
   display: flex;
   flex-direction: column;
@@ -10869,7 +10869,7 @@ textarea.form-control-lg {
 
 #fight {
   width: 50vw;
-  height: 25vh;
+  height: 30vh;
   background-color: lightcoral;
   display: flex;
   flex-direction: column-reverse;
@@ -10877,7 +10877,7 @@ textarea.form-control-lg {
 
 #sleep {
   width: 50vw;
-  height: 25vh;
+  height: 30vh;
   background-color: lightblue;
   display: flex;
   flex-direction: column-reverse;
@@ -10898,9 +10898,8 @@ button {
   text-align: center;
 }
 
-.emoji_eat {
-  color: green; /* color del emoji */
-  background-color: transparent; /* fondo transparente */
+audio {
+  visibility: hidden;
 }
 
 progress {

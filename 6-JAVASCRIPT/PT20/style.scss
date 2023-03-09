@@ -26,7 +26,7 @@
 
 #eat{
     width: 50vw;
-    height: 25vh;
+    height: 30vh;
     background-color: lightgreen;
     display: flex;
     flex-direction: column;
@@ -39,10 +39,9 @@
     justify-content: space-around;
 }
 
-
 #play{
     width: 50vw;
-    height: 25vh;
+    height: 30vh;
     background-color: rgb(255, 255, 126);
     display: flex;
     flex-direction: column;
@@ -51,7 +50,7 @@
 
 #fight{
     width: 50vw;
-    height: 25vh;
+    height: 30vh;
     background-color: lightcoral;
     display: flex;
     flex-direction: column-reverse;
@@ -59,7 +58,7 @@
 
 #sleep{
     width: 50vw;
-    height: 25vh;
+    height: 30vh;
     background-color: lightblue;
     display: flex;
     flex-direction: column-reverse;
@@ -81,10 +80,8 @@ button{
     text-align: center;
 }
 
-.emoji_eat {
-    // font-size: 40px; /* tamaño del emoji */
-    color: green; /* color del emoji */
-    background-color: transparent; /* fondo transparente */
+audio{
+    visibility: hidden;
 }
 
 progress{
