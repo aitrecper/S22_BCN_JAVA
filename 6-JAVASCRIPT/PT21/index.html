@@ -16,26 +16,55 @@
 </head>
 <link rel="stylesheet" href="https://fonts.google.com/specimen/League+Spartan">
 <link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
 <body class="theme-1">
   <div class="calc">
-    <div class="calc_theme">
-      <span>calc</span>
+    <div id="calc_theme">
+      <span class="theme-1">calc</span>
       <div class="theme_selector">
-
+        <div id="num_container">
+          <div><span class="theme-1">1</span></div>
+          <div><span class="theme-1">2</span></div>
+          <div><span class="theme-1">3</span></div>
+        </div>
+        <div id="theme_selector_bg" class="theme-1">
+          <div id="theme_selector_dot" class="theme-1"></div>
+        </div>
       </div>
-      <div id="screen" class="theme-1">
-        <span id="result">0</span>
-      </div>
-      <div>
-        <div id="buttons" class="theme-1">
-          <div class=""></div>
-          <div class=""></div>
-          <div class=""></div>
-          <div class=""></div>
-          <div class="">
-            <button class="b-large" id="reset" value="reset">RESET</button>
-            <button class="b-large" id="equal" value="=">=</button>
-          </div>
+    </div>
+    <div id="screen" class="theme-1">
+      <span id="result">0</span>
+    </div>
+    <div>
+      <div id="buttons" class="theme-1">
+        <div class="">
+          <button class="col-a theme-1" value="7">7</button>
+          <button class="col-b theme-1" value="8">8</button>
+          <button class="col-c theme-1" value="9">9</button>
+          <button class="col-d theme-1" id="del">DEL</button>
+        </div>
+        <div class="">
+          <button class="col-a theme-1" value="4">4</button>
+          <button class="col-b theme-1" value="5">5</button>
+          <button class="col-c theme-1" value="6">6</button>
+          <button class="col-d theme-1 operation" value="+">+</button>
+        </div>
+        <div class="">
+          <button class="col-a theme-1" value="1">1</button>
+          <button class="col-b theme-1" value="2">2</button>
+          <button class="col-c theme-1" value="3">3</button>
+          <button class="col-d theme-1 operation" value="-">-</button>
+        </div>
+        <div class="">
+          <button class="col-a theme-1" value=".">.</button>
+          <button class="col-b theme-1" value="0">0</button>
+          <button class="col-c theme-1 operation" value="/">/</button>
+          <button class="col-d theme-1 operation" value="x">x</button>
+        </div>
+        <div class="">
+          <button class=" theme-1" id="reset" value="reset">RESET</button>
+          <button class=" theme-1" id="equal" value="=">=</button>
         </div>
       </div>
     </div>
@@ -44,8 +73,8 @@
 
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a target="_blank" href="https://github.com/aitrecper">Aitor Recio Pérez</a>.
+    <span class="theme-1">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
+    <span class="theme-1">Coded by <a target="_blank" href="https://github.com/aitrecper">Aitor Recio Pérez</a>.</span>
   </div>
 </body>
 </html>
