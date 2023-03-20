@@ -1,7 +1,6 @@
 package com.recio.aitor;
-import com.recio.aitor.Car;
 
-public class PT33 {
+public class PT32 {
 
 	public static void main(String[] args) {
 		
