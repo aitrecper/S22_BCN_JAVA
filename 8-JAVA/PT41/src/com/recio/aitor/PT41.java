@@ -2,12 +2,14 @@ package com.recio.aitor;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.Locale;
 
 public class PT41 {
 
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
+		sc.useLocale(Locale.ITALIAN);
 		
 		System.out.print("Introduce una palabra o frase: ");
 		String frase = sc.nextLine();
@@ -69,6 +71,56 @@ public class PT41 {
 			sc.next();
 		}
 		
+		
+		int[] numeros = { 1, 2, 3 };
+
+        try {
+            System.out.println(numeros[3]);
+            int resultado = 10 / 0;
+            System.out.println("El resultado es: " + resultado);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.err.println("Error: El índice está fuera de los límites del array.");
+        }
+        
+        try {
+        	int resultado = 1 / 0;
+            System.out.println("El resultado es: " + resultado);
+        }
+        catch (ArithmeticException  e) {
+			// TODO: handle exception
+		}
+        
+        try {
+            int resultado = dividir(10, 0);
+            System.out.println("El resultado es: " + resultado);
+        } catch (ArithmeticException e) {
+            System.err.println("Error: No se puede dividir por cero.");
+            e.printStackTrace();
+        }
+        
+        double numero = 0;
+        boolean entradaValida = false;
+
+        while (!entradaValida) {
+            try {
+                System.out.print("Ingrese un número real: ");
+                numero = sc.nextDouble();
+                entradaValida = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Error: La entrada no es un número válido.");
+                sc.next(); // Limpiar el búfer del scanner
+            }
+        }
+
+        System.out.println("El número ingresado es: " + numero);
+		
 		sc.close();
 	}
+	
+	public static int dividir(int numerador, int denominador) throws ArithmeticException {
+        if (denominador == 0) {
+            throw new ArithmeticException("División por cero");
+        }
+        return numerador / denominador;
+    }
 }
