@@ -1,50 +1,40 @@
 package com.ejemplo.demo.controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
-import com.ejemplo.demo.TextToJSON;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+@RestController
 public class HomeController {
 
-    @ResponseBody
-    @RequestMapping("/")
-//    public ModelAndView index() {
-//        ModelAndView modelAndView = new ModelAndView();
-//        modelAndView.setViewName("test.html");
-//
-//        return modelAndView;
-//    }
-//    public TextToJSON test() {
-//        TextToJSON textToJson = new TextToJSON("test.html");
-//        return textToJson;
-//    }
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
-//    @RequestMapping(path = "/", produces = "application/json")
-//    public String index() {
-//        return "{\"page\": \"index.html\"}";
-//    }
+    @GetMapping("/users")
+    public List<String> getAllUsers() {
 
-//    public ObjectNode index() {
-//
-//        ObjectMapper mapper = new ObjectMapper();
-//        ObjectNode node = mapper.createObjectNode();
-//        node.put("message", "Hello World!");
-//        return node;
-//    }
+        final String QUERY1 = "SELECT * FROM users;";
 
-    public ResponseEntity<String> index() {
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        return new ResponseEntity<String>("{\"test\": \"Hello World with ResponseEntity\"}",headers, HttpStatus.OK);
+        List<Map<String, Object>> result = jdbcTemplate.queryForList(QUERY1);
+
+        List<String> userList = new ArrayList<String>();
+
+        for(Map<String, Object> row : result)
+            userList.add(row.get("nombre").toString());
+
+        return userList;
     }
+
 }
