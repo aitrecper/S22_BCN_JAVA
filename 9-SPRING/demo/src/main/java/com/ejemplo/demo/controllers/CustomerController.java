@@ -12,6 +12,7 @@ public class CustomerController {
 
     @Autowired
     CustomerService customerService;
+    private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(CustomerController.class);
 
     @GetMapping("/customer")
     public List<Customers> getCustomers() {
@@ -25,6 +26,7 @@ public class CustomerController {
 
     @PostMapping("/customer/add")
     public Customers addCustomer(@RequestBody Customers customer) {
+        LOGGER.info("Adding customer: {}", customer);
         return customerService.addCustomer(customer);
     }
 
