@@ -20,6 +20,6 @@ public class Stars {
     @Column (name = "about")
     private String about;
 
-    @ManyToMany(mappedBy = "stars")
-    private Collection<Movies> movies;
+//    @ManyToMany(mappedBy = "stars")
+//    private Collection<Movies> movies;
 }

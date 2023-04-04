@@ -3,8 +3,7 @@ package com.dbmovies.dbmovies.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
-
-import java.util.Collection;
+import java.util.List;
 
 @Data
 @Entity
@@ -43,23 +42,23 @@ public class Movies {
     private int votes;
 
     @Column(name = "gross")
-    private int gross;
+    private Integer gross;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     @JoinTable(name = "movies_directors",
     joinColumns = @JoinColumn(name = "movies_id"),
     inverseJoinColumns = @JoinColumn(name = "directors_id"))
-    private Collection<Directors> directors;
+    private List<Directors> directors;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "movies_genres",
             joinColumns = @JoinColumn(name = "movies_id"),
             inverseJoinColumns = @JoinColumn(name = "genres_id"))
-    private Collection<Genres> genres;
+    private List<Genres> genres;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "movies_stars",
             joinColumns = @JoinColumn(name = "movies_id"),
             inverseJoinColumns = @JoinColumn(name = "stars_id"))
-    private Collection<Stars> stars;
+    private List<Stars> stars;
 }

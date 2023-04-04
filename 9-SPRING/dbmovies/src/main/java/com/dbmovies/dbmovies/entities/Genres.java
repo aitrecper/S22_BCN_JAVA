@@ -17,6 +17,6 @@ public class Genres {
     @Column(name = "name")
     private String name;
 
-    @ManyToMany(mappedBy = "genres")
-    private Collection<Movies> movies;
+//    @ManyToMany(mappedBy = "genres")
+//    private Collection<Movies> movies;
 }
