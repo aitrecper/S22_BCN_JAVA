@@ -1,11 +1,9 @@
 package com.dbmovies.dbmovies.controllers;
 
-import com.dbmovies.dbmovies.entities.Movies;
 import com.dbmovies.dbmovies.entities.MoviesDTO;
 import com.dbmovies.dbmovies.services.MoviesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,8 +13,14 @@ public class MovieDTOController {
     @Autowired
     private MoviesService moviesService;
 
-    @GetMapping("/movieDTO")
+    @GetMapping("/moviedto")
     public List<MoviesDTO> movieDTO() {
-        return moviesService.getAllMovies();
+        return moviesService.getAllMoviesDTO();
     }
+
+    @GetMapping("/moviedto/{id}")
+    public MoviesDTO getMovieDTO(@PathVariable("id") Long id) {
+        return moviesService.getMovieDTOById(id);
+    }
+
 }

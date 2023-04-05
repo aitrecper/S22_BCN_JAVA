@@ -18,13 +18,17 @@ public class MoviesService {
     private MoviesRepository moviesRepository;
 
 
-    public void saveMovie(Movies movie) {
-        moviesRepository.save(movie);
+    public Movies saveMovie(Movies movie) {
+       return moviesRepository.save(movie);
     }
 
-    public List<MoviesDTO> getAllMovies() {
+    public List<Movies> getAllMovies() {
+        return moviesRepository.findAll();
+    }
+
+    public List<MoviesDTO> getAllMoviesDTO() {
         List<Movies> moviesList =  moviesRepository.findAll();
-        //LOGGER.info("List of movies: {}", moviesList);
+        LOGGER.info("List of movies: {}", moviesList);
 
         List<MoviesDTO> moviesDtoList = new ArrayList<>();
 
@@ -57,11 +61,38 @@ public class MoviesService {
         return moviesRepository.findById(id).get();
     }
 
-    public void deleteMovie(Long id) {
-        moviesRepository.deleteById(id);
+    public MoviesDTO getMovieDTOById(Long id) {
+        MoviesDTO moviesDto = new MoviesDTO();
+        Movies movie = moviesRepository.findById(id).get();
+
+        moviesDto.setId(movie.getId());
+        moviesDto.setTitle(movie.getTitle());
+        List<String> directorsList = new ArrayList<>();
+        for (Directors director : movie.getDirectors()) {
+            directorsList.add(director.getName());
+        }
+        List<String> genresList = new ArrayList<>();
+        for (Genres genre : movie.getGenres()) {
+            genresList.add(genre.getName());
+        }
+        List<String> castList = new ArrayList<>();
+        for (Stars star : movie.getStars()) {
+            castList.add(star.getName());
+        }
+        moviesDto.setDirectors(directorsList);
+        moviesDto.setGenres(genresList);
+        moviesDto.setStars(castList);
+
+        return moviesDto;
     }
 
-    public void updateMovie(Movies movie) {
-        moviesRepository.save(movie);
+    public String deleteMovie(Long id) {
+        moviesRepository.deleteById(id);
+        return "Movie deleted";
+    }
+
+    public Movies updateMovie(Long id, Movies movie) {
+        movie.setId(Math.toIntExact(id));
+        return moviesRepository.save(movie);
     }
 }
